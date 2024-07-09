@@ -1,95 +1,191 @@
-/* Reset default margin and padding */
+/* Resetting default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: #d3e0ea; /* Slightly darker blue background */
+    color: #333; /* Darker text color */
+}
+
+/* Header styles */
+.sidebar-info {
+    display: flex;
+    align-items: center;
     padding: 20px;
+    background-color: #5e8aac; /* Darker blue */
+    color: #fff;
 }
 
-/* Header styling */
-header {
-    text-align: center;
-    margin-bottom: 20px;
+.avatar-box {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #333;
+.avatar-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
-header p {
-    font-size: 1.2rem;
-    color: #666;
+.info-content {
+    flex: 1;
 }
 
-/* Section styling */
+.socials {
+    margin-top: 10px;
+}
+
+.socials a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #ffc107; /* Yellow on hover */
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto; /* Center content */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 section {
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* Increased margin between sections */
 }
 
-section h2 {
-    font-size: 2rem;
-    color: #333;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+h2 {
+    border-bottom: 2px solid #5e8aac; /* Darker blue */
+    padding-bottom: 10px;
+    margin-bottom: 20px; /* Increased spacing for headings */
 }
 
-section ul {
+ul {
     list-style-type: none;
+    padding-left: 20px; /* Indent list items */
 }
 
-section ul li {
+ul li {
     margin-bottom: 10px;
 }
 
-/* Form styling */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
+.content-card {
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Increased margin between cards */
+}
+
+.content-card h3 {
+    color: #5e8aac; /* Darker blue headings */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #5e8aac; /* Darker blue */
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: #5e8aac; /* Darker blue */
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* White links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Yellow on hover */
+}
+
+/* Form styles */
+form {
+    max-width: 500px;
+    margin: auto;
 }
 
 form label {
     display: block;
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 5px;
 }
 
-form input[type="text"],
-form input[type="email"],
+form input,
 form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-form textarea {
-    resize: vertical;
+    font-size: 14px; /* Smaller font size for inputs */
 }
 
 form button {
-    background-color: #007bff;
+    background-color: #5e8aac; /* Darker blue */
     color: #fff;
-    border: none;
     padding: 10px 20px;
-    cursor: pointer;
+    border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #3a6382; /* Even darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .avatar-box {
+        margin-bottom: 10px;
+    }
+
+    .socials {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
