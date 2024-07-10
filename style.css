@@ -11,48 +11,51 @@ body {
     line-height: 1.6;
     background-color: #d3e0ea; /* Slightly darker blue background */
     color: #333; /* Darker text color */
+    transition: background-color 0.3s ease;
+    margin-bottom: 50px; /* Ensure space below content for footer */
 }
 
 /* Header styles */
 .sidebar-info {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items to the left */
     padding: 20px;
     background-color: #5e8aac; /* Darker blue */
     color: #fff;
-}
-
-.avatar-box {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.avatar-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
 .info-content {
     flex: 1;
 }
 
+.name {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.role {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
 .socials {
     margin-top: 10px;
+    transition: margin-top 0.3s ease;
 }
 
 .socials a {
     color: #fff;
     font-size: 1.5rem;
     margin-right: 10px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .socials a:hover {
     color: #ffc107; /* Yellow on hover */
+    transform: scale(1.2);
 }
 
 /* Main styles */
@@ -62,25 +65,31 @@ main {
     margin: 20px auto; /* Center content */
     border-radius: 10px; /* Slightly rounded corners */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    min-height: calc(100vh - 70px); /* Adjust based on header and footer height */
 }
 
 section {
     margin-bottom: 40px; /* Increased margin between sections */
+    transition: margin-bottom 0.3s ease;
 }
 
 h2 {
     border-bottom: 2px solid #5e8aac; /* Darker blue */
     padding-bottom: 10px;
     margin-bottom: 20px; /* Increased spacing for headings */
+    transition: border-bottom 0.3s ease, padding-bottom 0.3s ease, margin-bottom 0.3s ease;
 }
 
 ul {
     list-style-type: none;
     padding-left: 20px; /* Indent list items */
+    transition: padding-left 0.3s ease;
 }
 
 ul li {
     margin-bottom: 10px;
+    transition: margin-bottom 0.3s ease;
 }
 
 .content-card {
@@ -88,10 +97,54 @@ ul li {
     border: 1px solid #ddd;
     border-radius: 10px;
     margin-bottom: 30px; /* Increased margin between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .content-card h3 {
     color: #5e8aac; /* Darker blue headings */
+    transition: color 0.3s ease;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 15px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center; /* Center align text */
+    display: inline-block; /* Display as inline block */
+    min-width: max-content; /* Minimum width based on content */
+    margin-bottom: 10px; /* Bottom margin */
+    margin-right: 10px; /* Right margin for spacing between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer styles */
@@ -104,6 +157,21 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Message to Visitors */
+#message-to-visitors {
+    background-color: #5e8aac; /* Darker blue */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Ensure it's positioned within the flow */
+    z-index: 10; /* Ensure it's above other content */
 }
 
 /* Navigation styles */
@@ -113,10 +181,12 @@ nav ul {
     list-style-type: none;
     background-color: #5e8aac; /* Darker blue */
     padding: 10px 0;
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 nav ul li {
     margin-right: 20px;
+    transition: margin-right 0.3s ease;
 }
 
 nav ul li a {
@@ -133,11 +203,13 @@ nav ul li a:hover {
 form {
     max-width: 500px;
     margin: auto;
+    transition: max-width 0.3s ease, margin 0.3s ease;
 }
 
 form label {
     display: block;
     margin-bottom: 5px;
+    transition: margin-bottom 0.3s ease;
 }
 
 form input,
@@ -148,6 +220,7 @@ form textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px; /* Smaller font size for inputs */
+    transition: padding 0.3s ease, margin-bottom 0.3s ease, border-radius 0.3s ease, font-size 0.3s ease;
 }
 
 form button {
@@ -157,7 +230,7 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 form button:hover {
@@ -168,11 +241,8 @@ form button:hover {
 @media (max-width: 768px) {
     .sidebar-info {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .avatar-box {
-        margin-bottom: 10px;
+        align-items: flex-start; /* Align items to the left on smaller screens */
+        transition: flex-direction 0.3s ease, align-items 0.3s ease;
     }
 
     .socials {
@@ -182,6 +252,7 @@ form button:hover {
     nav ul {
         flex-direction: column;
         align-items: center;
+        transition: flex-direction 0.3s ease, align-items 0.3s ease;
     }
 
     nav ul li {
